@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Open Sans", sans-serif; /* Apply sans-serif font */
+}
+
+.card-text,
+.btn,
+.nav-link {
+  font-family: "Open Sans", sans-serif; /* Apply sans-serif font to other text elements */
+}
+
+.card-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal; /* Allow wrapping to multiple lines */
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limit to 2 lines */
+  -webkit-box-orient: vertical;
+  font-family: "Open Sans", sans-serif; /* Added */
+}
+
+.card {
+  margin: 10px;
+  outline: none;
+  border: none;
+  outline: 1px;
+}
+
+.card-img-top {
+  width: 70%; /* Narrower width to resemble a book */
+  height: 300px; /* Fixed height for uniformity */
+  object-fit: cover;
+  margin: 0 auto; /* Center the image horizontally */
+  display: block; /* Block display to ensure centering */
+  border-radius: 3px; /* Optional: add subtle rounded corners for a book effect */
+  border: none;
+  outline: 1px;
+}
+
+@media (max-width: 768px) {
+  .card-img-top {
+    width: 60%; /* Narrower width to resemble a book */
+    height: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    margin: 0 auto; /* Center the image */
+    display: block; /* Ensure it's centered horizontally */
+  }
+}
+
+.card-body {
+  text-align: center;
+  font-family: "Open Sans", sans-serif; /* Added */
+}
+
+.side {
+  margin-right: 30px;
+}
+
+.cart-img {
+  width: 500px;
+  height: 50px;
+}
+
+.paypal-img {
+  width: 80px;
+}
+
+.text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: "Open Sans", sans-serif; /* Added */
+}
+
+.alert-container {
+  position: relative; /* Change to relative */
+  left: 50%; /* Center horizontally */
+  text-align: center;
+  margin: 20px 10px;
+  transform: translateX(-50%); /* Adjust to keep it centered */
+  z-index: 1050; /* Ensure it's above other elements */
+  width: 40%; /* Adjust width as needed */
+  transition: opacity 0.5s ease; /* Fade-in/out animation */
+  opacity: 0; /* Start with an invisible alert */
+  visibility: hidden; /* Start with an invisible alert */
+  font-family: "Open Sans", sans-serif; /* Added */
+}
+
+/* Class to make the alert visible */
+.alert-visible {
+  opacity: 1; /* Fully visible */
+  visibility: visible; /* Set to visible */
+}
+
+.search-input {
+  width: 400px; /* Default width for small screens */
+}
+
+.table-color {
+  background-color: #013220;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+}
+
+/*styling color and buttons */
+.green {
+  background: linear-gradient(to right, #013b26, #01452c);
+  font-family: "Open Sans", sans-serif; /* Added */
+}
+
+.light-green {
+  background: linear-gradient(
+    to right,
+    #e6f0dc,
+    #ffffff
+  ); /* Gradient from a light color to a fresh light green */
+  font-family: "Open Sans", sans-serif; /* Added */
+}
+
+.navbar-color {
+  background: linear-gradient(to right, #013220, #013220, #013220);
+  font-family: "Open Sans", sans-serif; /* Added */
+}
+
+.navbar-color2 {
+  background: linear-gradient(to right, #013220, #013220);
+  font-family: "Open Sans", sans-serif; /* Added */
+}
+
+.gradient-background {
+  background: #ffffff;
+}
+
+.card-background {
+  background-color: rgb(255, 255, 253);
+  border-radius: 10px;
+  font-family: "Open Sans", sans-serif; /* Added */
+}
+
+.btn-style {
+  padding: 10px 20px; /* Adjust padding */
+  margin-right: 10px; /* Add right margin for spacing */
+  background: linear-gradient(to right, #013220, #013220);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  color: #ffffff; /* White text */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+  font-family: "Open Sans", sans-serif; /* Added */
+}
+
+.btn-style:hover {
+  background: linear-gradient(to right, #013b26, #01452c);
+  transform: scale(0.95);
+  color: #ffffff;
+}
+
+.btn-danger {
+  padding: 10px 20px; /* Adjust padding */
+  margin-right: 10px; /* Add right margin for spacing */
+  background: linear-gradient(to right, #8b0000, #8b0000);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  color: #ffffff; /* White text */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif; /* Added */
+}
+
+.btn-danger:hover {
+  background: linear-gradient(to right, #a71d2a, #b31f2e);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+  transform: scale(0.95);
+  color: #ffffff;
+}
+
+.btn-grey {
+  padding: 10px 20px; /* Adjust padding */
+  margin-right: 10px; /* Add right margin for spacing */
+  background: linear-gradient(to right, #5a6268, #73787c);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+.btn-grey:hover {
+  background: linear-gradient(to right, #6a737a, #82888d);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transform: scale(0.95);
+  transition: background-color 0.3s, transform 0.3s;
+  color: #ffffff;
+}
+
+.light-grey {
+  background-color: rgb(250, 255, 249);
+}
+
+.green-background {
+  background-color: #5aa131;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.borders {
+  border-radius: 15px;
+}
+
+.nav-zoom {
+  transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+}
+
+.nav-zoom:hover {
+  transform: scale(0.95); /* Scale down to 95% on hover */
+}
+
+.btn-outline-light {
+  color: #ffffff; /* Text color */
+  background-color: transparent; /* Default background color */
+  border: 1px solid #fff; /* Border color */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+  font-family: "Open Sans", sans-serif; /* Added */
+}
+
+/* Style for the button on hover */
+.btn-outline-light:hover {
+  background: linear-gradient(
+    to right,
+    #ffffff,
+    #ffffff
+  ); /* Light blue background color on hover */
+  color: #000000; /* Change text color on hover, if needed */
+  border-color: #013220; /* Change border color on hover */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.p1 {
+  font-family: "Open Sans", sans-serif;
+}

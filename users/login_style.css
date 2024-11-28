@@ -1,0 +1,228 @@
+body {
+  background: linear-gradient(to right, #013220, #01472d, #015a39);
+  font-family: "Open Sans", sans-serif; /* This already sets the default sans-serif font */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0 20px; /* Add padding to the sides of the body */
+  overflow: hidden; /* Prevent page overflow */
+}
+
+.login-container {
+  background-color: #ffffff; /* White background for the form */
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: row;
+  max-width: 1000px; /* Set a maximum width for the entire login container */
+  margin: auto; /* Center the container horizontally */
+  overflow: hidden; /* Hide overflow */
+  font-family: "Open Sans", sans-serif; /* Apply sans-serif font here */
+}
+
+.logo-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa; /* Light background for logo area */
+  padding: 20px;
+  max-height: 100%;
+}
+
+.logo-container img {
+  width: 100%;
+  height: auto;
+  max-width: 450px; /* Ensure logo size is similar to registration */
+  max-height: 80vh; /* Constrain height so it doesn’t overflow */
+}
+
+.form-container {
+  flex: 1.2;
+  padding: 20px;
+  background-color: #ffffff; /* White background for the form */
+  overflow-y: auto; /* Scroll form if necessary */
+  max-height: 100%; /* Prevent overflow */
+  width: 400px; /* Set a fixed width for the form container */
+  margin: 0 auto; /* Center the form container */
+  font-family: "Open Sans", sans-serif; /* Apply sans-serif font here */
+}
+
+.form-container h2 {
+  color: #495057;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.7rem; /* Slightly increase the size */
+  font-family: "Open Sans", sans-serif;
+}
+
+.form-group {
+  text-align: left; /* Center align text within the form group */
+}
+
+label {
+  color: #000; /* Black label text */
+  font-size: 0.85rem;
+  display: block; /* Ensure labels are block elements for better alignment */
+  margin-bottom: 5px; /* Add some space below the label */
+  font-family: "Open Sans", sans-serif;
+}
+
+.form-control {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Semi-transparent white background for inputs */
+  border: 1px solid #ced4da;
+  width: 100%; /* Set width for the input fields */
+  justify-content: center;
+  border-radius: 6px;
+  padding: 8px;
+  font-size: 0.85rem;
+  margin: 0; /* Center the input fields */
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Button styling */
+.btn-btns {
+  padding: 10px 100px; /* Match padding of the admin button */
+  background: linear-gradient(to right, #013220, #013220);
+  color: white; /* Black text */
+  border: none;
+  border-radius: 5px; /* Change border-radius to match admin */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: all 0.3s ease; /* Add transition for hover effect */
+  margin: 20px auto; /* Center the button */
+  display: block; /* Make the button a block element to allow margin auto to work */
+  text-align: center;
+  font-family: "Open Sans", sans-serif; /* Apply sans-serif font to buttons */
+}
+
+.btn-btns:hover {
+  background: linear-gradient(to right, #013b26, #01452c);
+  box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+  transform: scale(0.98);
+}
+
+.text-register a {
+  color: #000;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+  font-family: "Open Sans", sans-serif;
+}
+
+.text-register a:hover {
+  color: rgb(123, 123, 123);
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  body {
+    padding: 0 10px; /* Reduce side padding on smaller screens */
+  }
+  .login-container {
+    flex-direction: column; /* Stack vertically on mobile */
+    height: auto; /* Allow height to grow as needed */
+    max-width: 90%;
+    padding: 10px;
+  }
+
+  .logo-container img {
+    width: 100%;
+    max-width: 600px; /* Increase width for mobile view */
+    max-height: 50vh; /* Adjust max-height to fit in mobile view */
+    border-radius: 10px;
+  }
+
+  .form-container {
+    padding: 15px;
+    max-width: 90%; /* Allow the form to take up to 90% of the viewport width */
+    margin: 0 auto; /* Center the form container */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    background-color: white; /* Optional: Set a background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow for depth */
+  }
+
+  .form-control {
+    padding: 6px;
+    font-size: 0.85rem;
+  }
+
+  .btn-login {
+    font-size: 0.85rem;
+    padding: 10px;
+  }
+}
+
+.alert-container.show {
+  /* Class added via JS to bring alert into view */
+  top: 40px;
+}
+
+.alert-visible {
+  top: 0px; /* Adjust this position to move it into view */
+}
+
+.border {
+  border-radius: 5px;
+}
+
+.p1 {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  body {
+    padding: 0 10px; /* Reduce side padding on smaller screens */
+  }
+
+  .login-container {
+    flex-direction: column; /* Stack the login and logo containers vertically */
+    height: auto; /* Allow height to grow as needed */
+    max-width: 90%; /* Increase the width to take up 90% of the screen */
+    padding: 10px; /* Add some padding to avoid content touching the edges */
+    margin-top: 12px;
+  }
+
+  .logo-container img {
+    width: 70%; /* Logo takes up 70% of the container width */
+    max-width: 150px; /* Limit the width of the logo */
+    max-height: 40vh; /* Adjust max-height for better fit on mobile */
+    border-radius: 10px; /* Add rounded corners */
+    margin: 0 auto; /* Center the logo */
+  }
+
+  .form-container {
+    padding: 15px;
+    max-width: 90%; /* Form container takes up 90% of the screen width */
+    margin: 0 auto; /* Center the form container */
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  }
+
+  .form-control {
+    padding: 8px;
+    font-size: 0.85rem; /* Adjust font size for better mobile readability */
+  }
+
+  .btn-btns {
+    font-size: 0.85rem;
+    padding: 10px 40px; /* Reduced button padding to make it more compact */
+  }
+
+  .form-container h2 {
+    font-size: 1.3rem; /* Adjust the heading size */
+    text-align: center; /* Center align the heading for better aesthetics */
+  }
+
+  .form-group label {
+    font-size: 0.9rem; /* Adjust label size */
+  }
+}
